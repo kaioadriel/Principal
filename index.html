@@ -1584,7 +1584,7 @@
         </a>
       </div>
 
-      <a class="pdf-button pdf-button-small-left" id="download-curriculo-pdf" href="https://kaioadriel.com.br/curriculo/kaioadrielguimaraes.pdf" target="_blank" rel="noopener noreferrer" download="kaioadrielguimaraes.pdf">
+      <a class="pdf-button pdf-button-small-left" id="download-curriculo-pdf" href="https://kaioadriel.com.br/curriculo/kaioadrielguimaraes.pdf" target="_blank" download="kaioadrielguimaraes.pdf">
         <i class="fa-solid fa-file-pdf"></i>
         <span>Download Currículo em PDF</a>
         <button class="pdf-button print-page-btn" type="button" id="print-full-page">
@@ -2177,22 +2177,18 @@
   window.addEventListener('afterprint', () => {
     document.body.classList.remove('printing-full-page');
   });
-
-  // Abrir currículo primeiro e baixar depois, evitando aba em branco no Chrome
+  // Abrir currículo em nova aba e baixar depois, sem interferir nos apps
   const curriculoPdfButton = document.getElementById('download-curriculo-pdf');
   if (curriculoPdfButton) {
     curriculoPdfButton.addEventListener('click', event => {
       event.preventDefault();
 
       const pdfUrl = curriculoPdfButton.href;
-      const pdfWindow = window.open('about:blank', '_blank', 'noopener,noreferrer');
 
-      if (pdfWindow) {
-        pdfWindow.location.href = pdfUrl;
-      } else {
-        return;
-      }
+      // Abre o PDF em nova aba primeiro.
+      window.open(pdfUrl, '_blank');
 
+      // Depois dispara o download com pequeno atraso.
       window.setTimeout(() => {
         const downloadLink = document.createElement('a');
         downloadLink.href = pdfUrl;
@@ -2201,17 +2197,17 @@
         document.body.appendChild(downloadLink);
         downloadLink.click();
         downloadLink.remove();
-      }, 1200);
+      }, 900);
     });
   }
-
   // Abrir links VER DEMO apenas em nova aba
   document.querySelectorAll('.demo-link').forEach(link => {
     link.addEventListener('click', event => {
       event.preventDefault();
-      window.open(link.href, '_blank', 'noopener,noreferrer');
+      window.open(link.href, '_blank');
     });
   });
+});
 </script>
 
 </body>
