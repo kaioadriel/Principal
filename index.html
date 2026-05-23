@@ -38,8 +38,8 @@
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    max-width: 430px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     position: relative;
     overflow-x: hidden;
   }
@@ -48,7 +48,7 @@
   header {
     position: fixed;
     top: 0; left: 50%; transform: translateX(-50%);
-    width: 100%; max-width: 430px;
+    width: 100%; max-width: 960px;
     height: var(--header-h);
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -87,8 +87,8 @@
 
   /* ── MAIN CONTENT ── */
   main {
-    margin-top: var(--header-h);
-    margin-bottom: var(--footer-h);
+    width: min(100%, 960px);
+    margin: var(--header-h) auto var(--footer-h);
     min-height: calc(100vh - var(--header-h) - var(--footer-h));
   }
 
@@ -504,7 +504,7 @@
   footer {
     position: fixed;
     bottom: 0; left: 50%; transform: translateX(-50%);
-    width: 100%; max-width: 430px;
+    width: 100%; max-width: 960px;
     height: var(--footer-h);
     background: var(--surface);
     border-top: 1px solid var(--border);
@@ -646,6 +646,128 @@
 
   /* scroll adjustment */
   .scroll-section { padding-bottom: 4px; }
+
+  /* ── RESPONSIVIDADE DESKTOP ── */
+  @media (min-width: 760px) {
+    :root {
+      --header-h: 68px;
+      --footer-h: 76px;
+    }
+
+    header {
+      padding: 0 28px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.04);
+    }
+
+    main {
+      background: transparent;
+    }
+
+    .hero {
+      border-radius: 0 0 28px 28px;
+      padding: 38px 34px 34px;
+    }
+
+    .hero-avatar {
+      width: 96px;
+      height: 96px;
+      font-size: 32px;
+    }
+
+    .hero-name {
+      font-size: 28px;
+    }
+
+    .hero-role {
+      font-size: 14px;
+    }
+
+    .hero-tags {
+      gap: 10px;
+    }
+
+    .hero-tag {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+
+    .section {
+      padding: 28px 34px;
+    }
+
+    .stats-row {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card,
+    .contact-link,
+    .contact-form,
+    .pcd-banner,
+    .stat-card,
+    .app-card {
+      box-shadow: 0 6px 26px rgba(0,0,0,0.07);
+    }
+
+    .app-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .nav-label {
+      font-size: 11px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      background:
+        radial-gradient(circle at 12% 8%, rgba(45,107,228,0.08), transparent 30%),
+        radial-gradient(circle at 88% 12%, rgba(232,131,74,0.08), transparent 28%),
+        var(--bg);
+    }
+
+    main,
+    header,
+    footer {
+      max-width: 1040px;
+    }
+
+    main {
+      width: min(100%, 1040px);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .app-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    #tab-perfil .section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    #tab-perfil .stats-row,
+    #tab-perfil .pcd-banner,
+    #tab-perfil .section-title,
+    #tab-perfil .card,
+    #tab-perfil .print-cv-btn,
+    #tab-perfil .page-footer,
+    #tab-perfil > .section > a,
+    #tab-perfil > .section > .site-footer,
+    #tab-perfil > .section > .footer-note {
+      grid-column: 1 / -1;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -663,7 +785,7 @@
   <div class="tab-content active" id="tab-perfil">
 
     <div class="hero">
-      <div class="hero-avatar"><img src="/fotos/fotoperfil.jpg" alt="Foto de perfil de Kaio Adriel Guimarães" onerror="this.style.display=\'none\'; this.parentElement.classList.add(\'avatar-fallback\'); this.parentElement.textContent=\'KA\';"></div>
+      <div class="hero-avatar"><img src="//kaioadriel.com.br/fotos/fotoperfil.jpg" alt="Foto de perfil de Kaio Adriel Guimarães" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback'); this.parentElement.textContent='KA';"></div>
       <div class="hero-name">Kaio Adriel Guimarães</div>
       <div class="hero-role">Auxiliar / Assistente Administrativo</div>
       <div class="hero-tags">
@@ -736,7 +858,7 @@
         </a>
       </div>
 
-      <a class="pdf-button" href="/curriculo/kaioadrielguimaraes.pdf" target="_blank">
+      <a class="pdf-button" href="//kaioadriel.com.br/curriculo/kaioadrielguimaraes.pdf" target="_blank">
         <i class="fa-solid fa-file-pdf"></i>
         <span>Imprimir Currículo em PDF</span>
       </a>
