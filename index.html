@@ -2072,23 +2072,34 @@
 
 <script>
   function showTab(id, btn) {
-    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-    document.getElementById('tab-' + id).classList.add('active');
-    btn.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    document.querySelectorAll('.nav-item').forEach(nav => {
+      nav.classList.remove('active');
+    });
+
+    const targetTab = document.getElementById('tab-' + id);
+    if (targetTab) {
+      targetTab.classList.add('active');
+    }
+
+    if (btn) {
+      btn.classList.add('active');
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Animate skill bars when skills tab opens
     if (id === 'skills') {
       setTimeout(() => {
         document.querySelectorAll('.skill-fill').forEach(el => {
-          el.style.width = el.dataset.w + '%';
+          el.style.width = (el.dataset.w || 0) + '%';
         });
       }, 100);
     }
   }
 
-  // Animate skill bars on first load if skills tab is active
   window.addEventListener('load', () => {
     document.querySelectorAll('.skill-fill').forEach(el => {
       el.style.width = '0%';
@@ -2102,6 +2113,7 @@
 
   function openSheetModal(planilha = '') {
     if (!sheetModal) return;
+
     sheetModal.classList.add('active');
     sheetModal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -2110,8 +2122,8 @@
       sheetSelect.value = planilha;
     }
 
-    if (planilha && sheetMessage && !sheetMessage.value.trim()) {
-      sheetMessage.value = `Olá, tenho interesse em solicitar a demo gratuita da ${planilha}.`;
+    if (planilha && sheetMessage) {
+      sheetMessage.value = 'Olá, tenho interesse em solicitar a demo gratuita da ' + planilha + '.';
     }
 
     setTimeout(() => {
@@ -2122,6 +2134,7 @@
 
   function closeSheetModal() {
     if (!sheetModal) return;
+
     sheetModal.classList.remove('active');
     sheetModal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
@@ -2152,7 +2165,6 @@
     }
   });
 
-
   // Impressão completa da página em PDF
   const printFullPageButton = document.getElementById('print-full-page');
   if (printFullPageButton) {
@@ -2173,12 +2185,11 @@
       event.preventDefault();
 
       const pdfUrl = curriculoPdfButton.href;
-
       const pdfWindow = window.open('about:blank', '_blank', 'noopener,noreferrer');
+
       if (pdfWindow) {
         pdfWindow.location.href = pdfUrl;
       } else {
-        window.location.href = pdfUrl;
         return;
       }
 
@@ -2193,8 +2204,6 @@
       }, 1200);
     });
   }
-});
-
 
   // Abrir links VER DEMO apenas em nova aba
   document.querySelectorAll('.demo-link').forEach(link => {
@@ -2203,7 +2212,6 @@
       window.open(link.href, '_blank', 'noopener,noreferrer');
     });
   });
-
 </script>
 
 </body>
