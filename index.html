@@ -1070,6 +1070,197 @@
     }
   }
 
+
+  /* ── MODAL DE SOLICITAÇÃO DE PLANILHA ── */
+  .sheet-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(26, 24, 22, 0.56);
+    backdrop-filter: blur(8px);
+  }
+
+  .sheet-modal.active {
+    display: flex;
+  }
+
+  .sheet-modal-card {
+    width: min(100%, 430px);
+    max-height: min(86vh, 720px);
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow-lg);
+    padding: 18px;
+  }
+
+  .sheet-modal-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .sheet-modal-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .sheet-modal-subtitle {
+    margin-top: 4px;
+    color: var(--text-soft);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .sheet-modal-close {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    background: var(--surface2);
+    color: var(--text-soft);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .sheet-form {
+    display: grid;
+    gap: 12px;
+  }
+
+  .sheet-form-group {
+    display: grid;
+    gap: 6px;
+  }
+
+  .sheet-form-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .sheet-form-field {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 12px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+
+  .sheet-form-field:focus {
+    border-color: var(--accent);
+    background: var(--surface);
+    box-shadow: 0 0 0 3px rgba(45,107,228,0.12);
+  }
+
+  textarea.sheet-form-field {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+
+  .sheet-form-note {
+    background: var(--accent-light);
+    border: 1px solid rgba(45,107,228,0.16);
+    color: var(--accent);
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.55;
+    font-weight: 600;
+  }
+
+  .sheet-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+  }
+
+  .sheet-submit,
+  .sheet-cancel {
+    min-height: 42px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .sheet-submit {
+    flex: 1;
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .sheet-cancel {
+    width: 96px;
+    background: var(--surface2);
+    color: var(--text-soft);
+  }
+
+  body.modal-open {
+    overflow: hidden;
+  }
+
+
+  /* ── AJUSTE DE LEGIBILIDADE DO FORMULÁRIO DE PLANILHA ── */
+  .sheet-modal-card,
+  .sheet-modal-card * {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    letter-spacing: normal !important;
+  }
+
+  .sheet-modal-title {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.4px !important;
+    text-transform: none !important;
+  }
+
+  .sheet-modal-subtitle {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .sheet-form-label {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px !important;
+    text-transform: none !important;
+    color: var(--text-soft) !important;
+  }
+
+  .sheet-form-field {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+  }
+
+  textarea.sheet-form-field {
+    line-height: 1.55 !important;
+  }
+
 </style>
 </head>
 <body>
@@ -1356,18 +1547,18 @@
         </div>
 
         <div class="app-card"><div class="app-icon" style="background:var(--accent-light)">📄</div><div class="app-name">Planilha de Pendência de Contratos</div><div class="app-type">Excel / Controle Administrativo</div><div class="app-tag" style="background:var(--accent-light);color:var(--accent)">Planilha</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a></div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Pendências de Contratos"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a></div>
 
         <div class="app-card"><div class="app-icon" style="background:var(--accent2-light)">🚗</div><div class="app-name">Planilha de Controle de Gravames</div><div class="app-type">Excel / Financiamentos</div><div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">Controle</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilhas de Controle de Gravames"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card"><div class="app-icon" style="background:var(--green-light)">📦</div><div class="app-name">Planilha de Estoque</div><div class="app-type">Excel / Produtos</div><div class="app-tag" style="background:var(--green-light);color:var(--green)">Estoque</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Estoque"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card"><div class="app-icon" style="background:var(--purple-light)">🧾</div><div class="app-name">Planilha de Notas Fiscais e Pagamentos</div><div class="app-type">Excel / Financeiro</div><div class="app-tag" style="background:var(--purple-light);color:var(--purple)">Financeiro</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Notas Fiscais e Pagamentos"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1375,7 +1566,7 @@
           <div class="app-name">Planilha de Escala de Trabalho</div>
           <div class="app-type">Excel / Gestão de Equipe</div>
           <div class="app-tag" style="background:var(--purple-light);color:var(--purple)">ESCALA</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Escala de Trabalho"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1383,7 +1574,7 @@
           <div class="app-name">Planilha de Metas Mensal</div>
           <div class="app-type">Excel / Indicadores</div>
           <div class="app-tag" style="background:var(--accent-light);color:var(--accent)">METAS</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Metas Mensal"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1391,7 +1582,7 @@
           <div class="app-name">Planilha de Atendimento ao Cliente</div>
           <div class="app-type">Excel / Atendimento</div>
           <div class="app-tag" style="background:var(--green-light);color:var(--green)">ATENDIMENTO</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Atendimento ao Cliente"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1399,7 +1590,7 @@
           <div class="app-name">Planilha de Vendas Marketplace</div>
           <div class="app-type">Excel / Vendas Online</div>
           <div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">MARKETPLACE</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Vendas Marketplace"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1407,7 +1598,7 @@
           <div class="app-name">Planilha de Compras e Fornecedores</div>
           <div class="app-type">Excel / Compras</div>
           <div class="app-tag" style="background:var(--purple-light);color:var(--purple)">FORNECEDORES</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Compras e Fornecedores"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1415,7 +1606,7 @@
           <div class="app-name">Planilha de Precificação e Lucro</div>
           <div class="app-type">Excel / Financeiro</div>
           <div class="app-tag" style="background:var(--green-light);color:var(--green)">LUCRO</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Precificação e Lucro"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1423,7 +1614,7 @@
           <div class="app-name">Planilha Controle de Envios e Transportadoras</div>
           <div class="app-type">Excel / Logística</div>
           <div class="app-tag" style="background:var(--accent-light);color:var(--accent)">LOGÍSTICA</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha Controle de Envios e Transportadoras"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
         <div class="app-card">
@@ -1431,7 +1622,7 @@
           <div class="app-name">Planilha de Investimentos</div>
           <div class="app-type">Excel / Investimentos</div>
           <div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">INVESTIMENTOS</div>
-          <a class="request-demo-link" href="https://kaioadriel.com.br/solicitarplanilha.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR </a>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Investimentos"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
         </div>
 
       
@@ -1546,6 +1737,73 @@
 
 </main>
 
+
+<div class="sheet-modal" id="solicitar-planilha-modal" aria-hidden="true">
+  <div class="sheet-modal-card" role="dialog" aria-modal="true" aria-labelledby="sheet-modal-title">
+    <div class="sheet-modal-head">
+      <div>
+        <div class="sheet-modal-title" id="sheet-modal-title">Solicitar Planilha</div>
+        <div class="sheet-modal-subtitle">Preencha os dados abaixo para solicitar sua planilha demo.</div>
+      </div>
+      <button class="sheet-modal-close" type="button" data-close-sheet-modal aria-label="Fechar formulário">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <form class="sheet-form" action="https://formspree.io/f/xredlzkn" method="POST">
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-nome">Nome:</label>
+        <input class="sheet-form-field" id="sheet-nome" name="nome" type="text" required>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-telefone">Telefone:</label>
+        <input class="sheet-form-field" id="sheet-telefone" name="telefone" type="tel" required>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-email">E-mail:</label>
+        <input class="sheet-form-field" id="sheet-email" name="email" type="email" required>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-planilha">Planilha:</label>
+        <select class="sheet-form-field" id="sheet-planilha" name="planilha" required>
+          <option value="">Selecione uma planilha</option>
+            <option value="Planilha de Pendências de Contratos">Planilha de Pendências de Contratos</option>
+            <option value="Planilhas de Controle de Gravames">Planilhas de Controle de Gravames</option>
+            <option value="Planilha de Estoque">Planilha de Estoque</option>
+            <option value="Planilha de Notas Fiscais e Pagamentos">Planilha de Notas Fiscais e Pagamentos</option>
+            <option value="Planilha de Escala de Trabalho">Planilha de Escala de Trabalho</option>
+            <option value="Planilha de Metas Mensal">Planilha de Metas Mensal</option>
+            <option value="Planilha de Atendimento ao Cliente">Planilha de Atendimento ao Cliente</option>
+            <option value="Planilha de Vendas Marketplace">Planilha de Vendas Marketplace</option>
+            <option value="Planilha de Compras e Fornecedores">Planilha de Compras e Fornecedores</option>
+            <option value="Planilha de Precificação e Lucro">Planilha de Precificação e Lucro</option>
+            <option value="Planilha Controle de Envios e Transportadoras">Planilha Controle de Envios e Transportadoras</option>
+            <option value="Planilha de Investimentos">Planilha de Investimentos</option>
+        </select>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-mensagem">Mensagem:</label>
+        <textarea class="sheet-form-field" id="sheet-mensagem" name="mensagem" required></textarea>
+      </div>
+
+      <div class="sheet-form-note">
+        Solicite apenas 1 planilha Demo gratuita. Para outras solicite um orçamento para uma versão personalizada exclusivamente para você.
+      </div>
+
+      <input type="hidden" name="_subject" value="Solicitação de planilha demo pelo portfólio">
+      <div class="sheet-form-actions">
+        <button class="sheet-submit" type="submit">Enviar solicitação</button>
+        <button class="sheet-cancel" type="button" data-close-sheet-modal>Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
 <!-- FOOTER NAV -->
 <footer>
   <button class="nav-item active" onclick="showTab('perfil', this)">
@@ -1599,6 +1857,64 @@
       el.style.width = '0%';
     });
   });
+
+  // Modal de solicitação de planilha
+  const sheetModal = document.getElementById('solicitar-planilha-modal');
+  const sheetSelect = document.getElementById('sheet-planilha');
+  const sheetMessage = document.getElementById('sheet-mensagem');
+
+  function openSheetModal(planilha = '') {
+    if (!sheetModal) return;
+    sheetModal.classList.add('active');
+    sheetModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    if (planilha && sheetSelect) {
+      sheetSelect.value = planilha;
+    }
+
+    if (planilha && sheetMessage && !sheetMessage.value.trim()) {
+      sheetMessage.value = `Olá, tenho interesse em solicitar a demo gratuita da ${planilha}.`;
+    }
+
+    setTimeout(() => {
+      const firstInput = document.getElementById('sheet-nome');
+      if (firstInput) firstInput.focus();
+    }, 80);
+  }
+
+  function closeSheetModal() {
+    if (!sheetModal) return;
+    sheetModal.classList.remove('active');
+    sheetModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  document.querySelectorAll('.request-demo-link').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      openSheetModal(link.dataset.planilha || '');
+    });
+  });
+
+  document.querySelectorAll('[data-close-sheet-modal]').forEach(button => {
+    button.addEventListener('click', closeSheetModal);
+  });
+
+  if (sheetModal) {
+    sheetModal.addEventListener('click', event => {
+      if (event.target === sheetModal) {
+        closeSheetModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeSheetModal();
+    }
+  });
+
 </script>
 
 </body>
