@@ -1278,6 +1278,222 @@
     transform: translateY(-1px);
   }
 
+
+  /* ── BOTÃO E PDF IMPRIMÍVEL DA PÁGINA ── */
+  .print-page-btn {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 760px) {
+    .print-page-btn {
+      width: 220px !important;
+      max-width: 220px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    html,
+    body {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+      color: #111111 !important;
+      overflow: visible !important;
+      font-family: Arial, sans-serif !important;
+      font-size: 11pt !important;
+    }
+
+    * {
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+      max-width: 100% !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    header,
+    footer,
+    .sheet-modal,
+    .contact-form,
+    .sheet-form,
+    .sheet-modal-card,
+    .print-page-btn,
+    .pdf-button,
+    .demo-link,
+    .request-demo-link,
+    .nav-item,
+    .sheet-modal-close,
+    .form-submit,
+    .sheet-submit,
+    .sheet-cancel {
+      display: none !important;
+    }
+
+    main {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: auto !important;
+      background: #ffffff !important;
+    }
+
+    .tab-content {
+      display: block !important;
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+      page-break-after: auto;
+      break-after: auto;
+      margin-bottom: 18px !important;
+    }
+
+    .tab-content::before {
+      display: block;
+      font-size: 18pt;
+      font-weight: 800;
+      margin: 0 0 10px;
+      color: #111111;
+      border-bottom: 2px solid #dddddd;
+      padding-bottom: 6px;
+    }
+
+    #tab-perfil::before { content: "Perfil"; }
+    #tab-skills::before { content: "Habilidades"; }
+    #tab-exp::before { content: "Carreira"; }
+    #tab-apps::before { content: "Criações"; }
+    #tab-contato::before { content: "Contato"; }
+
+    .hero {
+      background: #f4f6fb !important;
+      color: #111111 !important;
+      border: 1px solid #dddddd !important;
+      border-radius: 12px !important;
+      padding: 14px !important;
+      margin-bottom: 12px !important;
+      overflow: visible !important;
+    }
+
+    .hero::before,
+    .hero::after {
+      display: none !important;
+    }
+
+    .hero-name,
+    .hero-role,
+    .hero-tag {
+      color: #111111 !important;
+    }
+
+    .hero-avatar {
+      box-shadow: none !important;
+      width: 64px !important;
+      height: 64px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .section {
+      padding: 0 !important;
+      margin: 0 0 14px !important;
+    }
+
+    .section-title {
+      color: #333333 !important;
+      margin: 14px 0 8px !important;
+      letter-spacing: 0.5px !important;
+      font-size: 10pt !important;
+    }
+
+    .stats-row,
+    .app-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 8px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .card,
+    .stat-card,
+    .pcd-banner,
+    .app-card,
+    .contact-link {
+      background: #ffffff !important;
+      border: 1px solid #dddddd !important;
+      border-radius: 10px !important;
+      padding: 10px !important;
+      margin-bottom: 8px !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .contact-link {
+      display: flex !important;
+      color: #111111 !important;
+      text-decoration: none !important;
+    }
+
+    .chips {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 5px !important;
+    }
+
+    .chip,
+    .app-tag,
+    .card-period {
+      border: 1px solid #dddddd !important;
+      background: #f4f4f4 !important;
+      color: #111111 !important;
+      padding: 3px 6px !important;
+      border-radius: 8px !important;
+      font-size: 8.5pt !important;
+      width: fit-content !important;
+      max-width: max-content !important;
+    }
+
+    .card-desc,
+    .pcd-sub,
+    .info-value,
+    .info-label,
+    .card-sub,
+    .app-type,
+    .contact-label,
+    .contact-value,
+    .course-name {
+      color: #222222 !important;
+    }
+
+    .info-row,
+    .course-item {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .page-footer,
+    .site-footer,
+    .footer-note {
+      display: block !important;
+      text-align: center !important;
+      margin-top: 18px !important;
+      color: #555555 !important;
+      font-size: 9pt !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1370,7 +1586,11 @@
 
       <a class="pdf-button pdf-button-small-left" href="https://kaioadriel.com.br/curriculo/kaioadrielguimaraes.pdf" target="_blank">
         <i class="fa-solid fa-file-pdf"></i>
-        <span>Imprimir Currículo em PDF</span>
+        <span>Imprimir Currículo em PDF</a>
+        <button class="pdf-button print-page-btn" type="button" id="print-full-page">
+          <i class="fa-solid fa-print"></i>
+          Imprimir esta Página
+        </button></span>
       </a>
     </div>
 
@@ -1930,6 +2150,20 @@
     if (event.key === 'Escape') {
       closeSheetModal();
     }
+  });
+
+
+  // Impressão completa da página em PDF
+  const printFullPageButton = document.getElementById('print-full-page');
+  if (printFullPageButton) {
+    printFullPageButton.addEventListener('click', () => {
+      document.body.classList.add('printing-full-page');
+      setTimeout(() => window.print(), 80);
+    });
+  }
+
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('printing-full-page');
   });
 
 </script>
