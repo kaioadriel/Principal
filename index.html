@@ -1261,6 +1261,23 @@
     line-height: 1.55 !important;
   }
 
+
+  /* ── CORREÇÃO DO BOTÃO FECHAR DO MODAL ── */
+  .sheet-modal-close {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+  }
+
+  .sheet-modal-close span {
+    display: inline-block;
+    transform: translateY(-1px);
+  }
+
 </style>
 </head>
 <body>
@@ -1634,9 +1651,11 @@
       <div class="card narrow-desktop">
         <div class="card-desc" style="border:none;padding:0;margin:0;font-size:13px;line-height:1.8">
           ✅ Planilhas e controles personalizados<br>
-          ✅ Automações simples para rotinas administrativas<br>
+          ✅ Automações para rotinas administrativas<br>
           ✅ Sites e Páginas HTML<br>
-          ✅ Textos, anúncios e conteúdos com IA<br>
+          ✅ Aplicativos para Smartphone e Desktop<br>
+          ✅ Textos, anúncios e conteúdos com IA utilizando prompts avançados.<br>
+          ✅ Imagens e Vídeos com IA utilizando prompts avançados<br>
           ✅ Fluxos e processos organizados<br>
           ✅ Dashboards e indicadores de desempenho
         </div>
@@ -1745,9 +1764,7 @@
         <div class="sheet-modal-title" id="sheet-modal-title">Solicitar Planilha</div>
         <div class="sheet-modal-subtitle">Preencha os dados abaixo para solicitar sua planilha demo.</div>
       </div>
-      <button class="sheet-modal-close" type="button" data-close-sheet-modal aria-label="Fechar formulário">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+      <button class="sheet-modal-close" type="button" data-close-sheet-modal aria-label="Fechar formulário"><span aria-hidden="true">×</span></button>
     </div>
 
     <form class="sheet-form" action="https://formspree.io/f/xredlzkn" method="POST">
