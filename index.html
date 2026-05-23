@@ -647,11 +647,12 @@
   /* scroll adjustment */
   .scroll-section { padding-bottom: 4px; }
 
-  /* ── CORREÇÃO DESKTOP: mantém o app elegante sem alterar smartphones ── */
+  /* ── DESKTOP V12: largura 650px e abas abaixo do cabeçalho ── */
   @media (min-width: 760px) {
     :root {
       --header-h: 64px;
-      --footer-h: 72px;
+      --footer-h: 64px;
+      --desktop-nav-h: 72px;
     }
 
     body {
@@ -666,7 +667,7 @@
     main,
     footer {
       width: 100%;
-      max-width: 430px;
+      max-width: 650px;
     }
 
     header {
@@ -677,36 +678,48 @@
     }
 
     main {
-      margin: var(--header-h) auto var(--footer-h);
-      min-height: calc(100vh - var(--header-h) - var(--footer-h));
+      margin: calc(var(--header-h) + var(--desktop-nav-h)) auto 0;
+      min-height: calc(100vh - var(--header-h) - var(--desktop-nav-h));
       background: var(--bg);
       box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      padding-bottom: 24px;
     }
 
     footer {
       position: fixed;
+      top: var(--header-h);
+      bottom: auto;
       left: 50%;
-      bottom: 0;
       transform: translateX(-50%);
-      height: var(--footer-h);
-      padding: 0 8px;
-      padding-bottom: env(safe-area-inset-bottom, 0);
-      box-shadow: 0 -8px 28px rgba(0,0,0,0.08);
+      height: var(--desktop-nav-h);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-top: none;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      z-index: 99;
+    }
+
+    .nav-item {
+      min-height: 50px;
+      justify-content: center;
     }
 
     .hero {
       border-radius: 0;
-      padding: 32px 20px 28px;
+      padding: 32px 28px 28px;
     }
 
     .hero-avatar {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       font-size: 26px;
     }
 
     .hero-name {
-      font-size: 22px;
+      font-size: 24px;
     }
 
     .hero-role {
@@ -719,15 +732,25 @@
     }
 
     .section {
-      padding: 20px;
+      padding: 24px 28px;
     }
 
     .app-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
     .nav-label {
       font-size: 10px;
+    }
+
+    .card,
+    .contact-link,
+    .contact-form,
+    .pcd-banner,
+    .stat-card,
+    .app-card {
+      max-width: 100%;
     }
   }
 
@@ -735,7 +758,7 @@
     header,
     main,
     footer {
-      max-width: 430px;
+      max-width: 650px;
     }
 
     #tab-perfil .section {
@@ -743,7 +766,7 @@
     }
 
     .app-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
