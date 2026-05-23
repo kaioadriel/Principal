@@ -2166,8 +2166,7 @@
     document.body.classList.remove('printing-full-page');
   });
 
-
-  // Abrir currículo em nova aba e baixar o PDF
+  // Abrir currículo primeiro e baixar depois, evitando aba em branco no Chrome
   const curriculoPdfButton = document.getElementById('download-curriculo-pdf');
   if (curriculoPdfButton) {
     curriculoPdfButton.addEventListener('click', event => {
@@ -2175,15 +2174,23 @@
 
       const pdfUrl = curriculoPdfButton.href;
 
-      window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+      const pdfWindow = window.open('about:blank', '_blank', 'noopener,noreferrer');
+      if (pdfWindow) {
+        pdfWindow.location.href = pdfUrl;
+      } else {
+        window.location.href = pdfUrl;
+        return;
+      }
 
-      const downloadLink = document.createElement('a');
-      downloadLink.href = pdfUrl;
-      downloadLink.download = 'kaioadrielguimaraes.pdf';
-      downloadLink.style.display = 'none';
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      downloadLink.remove();
+      window.setTimeout(() => {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pdfUrl;
+        downloadLink.download = 'kaioadrielguimaraes.pdf';
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+      }, 1200);
     });
   }
 
