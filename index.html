@@ -1,0 +1,2619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio profissional de Kaio Adriel Guimarães, também conhecido como Kaio Adriel: Assistente Administrativo PCD com experiência em rotinas administrativas, Excel, Inteligência Artificial, planilhas, dashboards e soluções digitais.">
+<meta name="keywords" content="Kaio Adriel, Kaio Adriel Guimarães, kaioadriel.com.br, Assistente Administrativo PCD, Auxiliar Administrativo, Excel Avançado, Inteligência Artificial, Planilhas, Dashboards, Praia Grande SP, Soluções Digitais">
+<meta name="author" content="Kaio Adriel Guimarães">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Kaio Adriel Guimarães | Kaio Adriel | Portfólio Profissional">
+<meta property="og:description" content="Portfólio profissional de Kaio Adriel: experiência administrativa, Excel, IA, planilhas, dashboards, apps e soluções digitais sob medida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kaioadriel.com.br/">
+<meta property="og:image" content="https://kaioadriel.com.br/fotos/fotoperfil.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kaio Adriel Guimarães | Kaio Adriel | Portfólio Profissional">
+<meta name="twitter:description" content="Portfólio profissional de Kaio Adriel com experiência administrativa, Excel, IA, planilhas, dashboards e apps.">
+<meta name="twitter:image" content="https://kaioadriel.com.br/fotos/fotoperfil.jpg">
+<title>Kaio Adriel Guimarães | Kaio Adriel | Portfólio Profissional</title>
+<link rel="canonical" href="https://kaioadriel.com.br/">
+<!-- FAVICON -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#2D6BE4">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F6F2;
+    --surface: #FFFFFF;
+    --surface2: #F0EEE9;
+    --border: #E4E1DA;
+    --text: #1A1816;
+    --text-soft: #6B6760;
+    --text-muted: #9B9891;
+    --accent: #2D6BE4;
+    --accent-light: #EBF0FD;
+    --accent2: #E8834A;
+    --accent2-light: #FDF1EA;
+    --green: #2E9E6B;
+    --green-light: #E8F7F1;
+    --purple: #7C5CDB;
+    --purple-light: #F1EDFB;
+    --header-h: 64px;
+    --footer-h: 72px;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.07);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 960px;
+    height: var(--header-h);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    backdrop-filter: blur(12px);
+  }
+
+  .header-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.1px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+
+  .header-name span { color: var(--accent); }
+
+  .header-badge {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN CONTENT ── */
+  main {
+    width: min(100%, 960px);
+    margin: var(--header-h) auto var(--footer-h);
+    min-height: calc(100vh - var(--header-h) - var(--footer-h));
+  }
+
+  /* ── TABS CONTENT ── */
+  .tab-content { display: none; animation: fadeUp 0.3s ease; }
+  .tab-content.active { display: block; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── HERO / PERFIL ── */
+  .hero {
+    background: linear-gradient(135deg, #1A1816 0%, #2D2A26 100%);
+    padding: 32px 20px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,107,228,0.3), transparent 70%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -20px;
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,131,74,0.2), transparent 70%);
+  }
+
+  .hero-avatar {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 26px; font-weight: 800;
+    color: white;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(45,107,228,0.4);
+    position: relative; z-index: 1;
+  }
+
+  .hero-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px; font-weight: 700;
+    color: white;
+    line-height: 1.2;
+    letter-spacing: -0.1px;
+    position: relative; z-index: 1;
+  }
+
+  .hero-role {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    margin-top: 4px;
+    position: relative; z-index: 1;
+  }
+
+  .hero-tags {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-top: 16px;
+    position: relative; z-index: 1;
+  }
+
+  .hero-tag {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.8);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .hero-tag.blue { background: rgba(45,107,228,0.25); border-color: rgba(45,107,228,0.4); color: #8BB4F5; }
+
+
+  .hero-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .hero-avatar.avatar-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-tags {
+    flex-wrap: nowrap;
+  }
+
+  .hero-tag {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 380px) {
+    .hero-tags { gap: 5px; }
+    .hero-tag { font-size: 10px; padding: 4px 7px; }
+  }
+
+  .info-link {
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .info-link:active { background: var(--surface2); }
+
+  .stat-card .stat-label:empty { display: none; }
+  .stat-num { word-break: keep-all; letter-spacing: -0.1px; }
+
+  /* ── SECTION ── */
+  .section { padding: 20px; }
+  .section + .section { padding-top: 0; }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:active { transform: scale(0.98); }
+
+  .card-header {
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+
+  .card-icon {
+    width: 42px; height: 42px;
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .card-icon.blue  { background: var(--accent-light); color: var(--accent); }
+  .card-icon.orange { background: var(--accent2-light); color: var(--accent2); }
+  .card-icon.green { background: var(--green-light); color: var(--green); }
+  .card-icon.purple{ background: var(--purple-light); color: var(--purple); }
+
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .card-sub {
+    font-size: 12px; color: var(--text-soft);
+    margin-top: 2px;
+  }
+
+  .card-period {
+    font-size: 10px; color: var(--text-muted);
+    background: var(--surface2);
+    padding: 2px 8px; border-radius: 20px;
+    margin-top: 2px; display: inline-block;
+  }
+
+  .card-desc {
+    font-size: 13px; color: var(--text-soft);
+    margin-top: 10px; line-height: 1.6;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+  }
+
+  /* ── SKILL BARS ── */
+  .skill-item {
+    margin-bottom: 14px;
+  }
+
+  .skill-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 6px;
+  }
+
+  .skill-name { font-size: 13px; font-weight: 500; }
+
+  .skill-pct {
+    font-size: 11px; color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .skill-bar {
+    height: 6px; background: var(--surface2);
+    border-radius: 10px; overflow: hidden;
+  }
+
+  .skill-fill {
+    height: 100%; border-radius: 10px;
+    background: linear-gradient(90deg, var(--accent), #5A8EF0);
+    width: 0;
+    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  }
+
+  .skill-fill.orange { background: linear-gradient(90deg, var(--accent2), #F0A87A); }
+  .skill-fill.green  { background: linear-gradient(90deg, var(--green), #5EC99A); }
+  .skill-fill.purple { background: linear-gradient(90deg, var(--purple), #A98EEF); }
+
+  /* ── CHIPS ── */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .chip {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
+    font-size: 12px; font-weight: 500;
+    padding: 6px 12px; border-radius: 20px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+
+  .chip i { font-size: 11px; }
+  .chip.blue  { background: var(--accent-light); border-color: rgba(45,107,228,0.2); color: var(--accent); }
+  .chip.orange{ background: var(--accent2-light); border-color: rgba(232,131,74,0.2); color: var(--accent2); }
+  .chip.green { background: var(--green-light); border-color: rgba(46,158,107,0.2); color: var(--green); }
+  .chip.purple{ background: var(--purple-light); border-color: rgba(124,92,219,0.2); color: var(--purple); }
+  .chip.yellow{ background: #FFF7D6; border-color: rgba(245,158,11,0.28); color: #B77900; }
+
+  /* ── CONTATO ── */
+  .contact-link {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.2s;
+  }
+
+  .contact-link:active { background: var(--surface2); }
+
+  .contact-icon {
+    width: 40px; height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+
+  .contact-label { font-size: 11px; color: var(--text-muted); }
+  .contact-value { font-size: 13px; font-weight: 500; margin-top: 1px; }
+
+  .contact-arrow { margin-left: auto; color: var(--text-muted); font-size: 12px; }
+
+  /* ── APP CARDS ── */
+  .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .app-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+  }
+
+  .app-card:active { transform: scale(0.97); }
+
+  .app-icon {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 10px;
+  }
+
+  .app-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .app-type {
+    font-size: 10px; color: var(--text-muted);
+    margin-top: 3px;
+  }
+
+  .app-tag {
+    display: inline-block;
+    font-size: 9px; font-weight: 600;
+    padding: 2px 6px; border-radius: 6px;
+    margin-top: 8px;
+    text-transform: uppercase; letter-spacing: 0.3px;
+  }
+
+  /* ── INFO ROW ── */
+  .info-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .info-row:last-child { border-bottom: none; }
+
+  .info-icon {
+    width: 34px; height: 34px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; flex-shrink: 0;
+  }
+
+  .info-label { font-size: 11px; color: var(--text-muted); }
+  .info-value { font-size: 13px; font-weight: 500; margin-top: 1px; }
+
+
+  /* ── FORMULÁRIO DE CONTATO ── */
+  .contact-form {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .form-field {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 12px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+
+  .form-field:focus {
+    border-color: var(--accent);
+    background: var(--surface);
+    box-shadow: 0 0 0 3px rgba(45,107,228,0.12);
+  }
+
+  textarea.form-field {
+    min-height: 118px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+
+  .form-submit {
+    width: 100%;
+    min-height: 46px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s, filter 0.2s;
+  }
+
+  .form-submit:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+  }
+
+  .form-note {
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+
+  /* ── FOOTER NAV ── */
+  footer {
+    position: fixed;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 960px;
+    height: var(--footer-h);
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    z-index: 100;
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 0 8px;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  .nav-item {
+    flex: 1;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 8px 4px;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+    border: none; background: none;
+    color: var(--text-muted);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-item.active { color: var(--accent); }
+
+  .nav-item i { font-size: 20px; transition: transform 0.2s; }
+  .nav-item.active i { transform: scale(1.1); }
+
+  .nav-label { font-size: 9.5px; font-weight: 600; letter-spacing: 0.1px; }
+
+  .nav-dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .nav-item.active .nav-dot { opacity: 1; }
+
+  /* ── STAT ROW ── */
+  .stats-row {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; margin-bottom: 20px;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 10px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 21px; font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.1px;
+  }
+
+  .stat-label {
+    font-size: 10px; color: var(--text-muted);
+    margin-top: 4px; font-weight: 500;
+  }
+
+  /* ── SCROLL ── */
+  .scroll-section { overflow-y: auto; }
+
+  /* ── COURSE LIST ── */
+  .course-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .course-item:last-child { border-bottom: none; }
+
+  .course-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .course-name { font-size: 13px; font-weight: 500; flex: 1; }
+
+  /* ── PCD BADGE ── */
+  .pcd-banner {
+    background: linear-gradient(135deg, var(--accent-light), var(--purple-light));
+    border: 1px solid rgba(45,107,228,0.15);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .pcd-icon {
+    width: 44px; height: 44px;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .pcd-title { font-weight: 700; font-size: 13px; }
+  .pcd-sub { font-size: 12px; color: var(--text-soft); margin-top: 2px; line-height: 1.4; }
+
+
+  .pdf-button {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent), #5A8EF0);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .pdf-button:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow);
+  }
+
+  .page-signature {
+    padding: 18px 20px 92px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  /* scroll adjustment */
+  .scroll-section { padding-bottom: 4px; }
+
+  /* ── DESKTOP V12: largura 650px e abas abaixo do cabeçalho ── */
+  @media (min-width: 760px) {
+    :root {
+      --header-h: 64px;
+      --footer-h: 64px;
+      --desktop-nav-h: 72px;
+    }
+
+    body {
+      display: block;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(45,107,228,0.08), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(232,131,74,0.08), transparent 26%),
+        var(--bg);
+    }
+
+    header,
+    main,
+    footer {
+      width: 100%;
+      max-width: 650px;
+    }
+
+    header {
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 20px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.04);
+    }
+
+    main {
+      margin: calc(var(--header-h) + var(--desktop-nav-h)) auto 0;
+      min-height: calc(100vh - var(--header-h) - var(--desktop-nav-h));
+      background: var(--bg);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      padding-bottom: 24px;
+    }
+
+    footer {
+      position: fixed;
+      top: var(--header-h);
+      bottom: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      height: var(--desktop-nav-h);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-top: none;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      z-index: 99;
+    }
+
+    .nav-item {
+      min-height: 50px;
+      justify-content: center;
+    }
+
+    .hero {
+      border-radius: 0;
+      padding: 32px 28px 28px;
+    }
+
+    .hero-avatar {
+      width: 80px;
+      height: 80px;
+      font-size: 26px;
+    }
+
+    .hero-name {
+      font-size: 24px;
+    }
+
+    .hero-role {
+      font-size: 13px;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      padding: 4px 10px;
+    }
+
+    .section {
+      padding: 24px 28px;
+    }
+
+    .app-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .nav-label {
+      font-size: 10px;
+    }
+
+    .card,
+    .contact-link,
+    .contact-form,
+    .pcd-banner,
+    .stat-card,
+    .app-card {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    header,
+    main,
+    footer {
+      max-width: 650px;
+    }
+
+    #tab-perfil .section {
+      display: block;
+    }
+
+    .app-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ── AJUSTES FINAIS DESKTOP V15 ── */
+  @media (min-width: 760px) {
+    html,
+    body {
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --header-h: 64px;
+      --desktop-nav-h: 72px;
+    }
+
+    body {
+      padding-top: calc(var(--header-h) + var(--desktop-nav-h)) !important;
+    }
+
+    header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      transform: translateX(-50%) !important;
+      width: 100% !important;
+      max-width: 650px !important;
+      height: var(--header-h) !important;
+      z-index: 9999 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 8px !important;
+      padding: 0 20px !important;
+      background: var(--surface) !important;
+      border-bottom: 1px solid var(--border) !important;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.04) !important;
+    }
+
+    .header-name {
+      flex: 0 1 auto !important;
+      max-width: calc(100% - 112px) !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    .header-badge {
+      margin-left: 0 !important;
+      flex-shrink: 0 !important;
+    }
+
+    footer {
+      position: fixed !important;
+      top: var(--header-h) !important;
+      left: 50% !important;
+      right: auto !important;
+      bottom: auto !important;
+      transform: translateX(-50%) !important;
+      width: 100% !important;
+      max-width: 650px !important;
+      height: var(--desktop-nav-h) !important;
+      z-index: 9998 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-around !important;
+      padding: 8px 12px !important;
+      background: var(--surface) !important;
+      border-top: none !important;
+      border-bottom: 1px solid var(--border) !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06) !important;
+    }
+
+    main {
+      width: 100% !important;
+      max-width: 650px !important;
+      margin: 0 auto !important;
+      padding-bottom: 24px !important;
+      min-height: calc(100vh - var(--header-h) - var(--desktop-nav-h)) !important;
+    }
+
+    .narrow-desktop {
+      width: min(100%, 430px) !important;
+      max-width: 430px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+
+    .contact-link.narrow-desktop {
+      display: flex !important;
+      width: min(100%, 430px) !important;
+      max-width: 430px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+    }
+
+    .contact-form {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .pdf-button.pdf-button-small-left {
+      width: 220px !important;
+      max-width: 220px !important;
+      min-height: 42px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .form-submit.form-submit-small-center {
+      width: 220px !important;
+      max-width: 220px !important;
+      min-height: 42px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+
+  .pcd-icon.pcd-icon-img {
+    overflow: hidden;
+    padding: 0;
+    background: var(--accent-light);
+  }
+
+  .pcd-icon.pcd-icon-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .demo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    min-height: 32px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: var(--text);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, filter 0.2s;
+  }
+
+  .demo-link:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+  }
+
+
+  .app-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .demo-link {
+    margin-top: auto;
+  }
+
+  .app-tag + .demo-link {
+    margin-top: 10px;
+  }
+
+
+  /* ── CORREÇÃO DOS SELOS EM CRIAÇÕES ── */
+  .app-card .app-tag {
+    align-self: flex-start;
+    width: fit-content;
+    max-width: max-content;
+    white-space: nowrap;
+  }
+
+
+  .request-demo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    min-height: 32px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, filter 0.2s;
+    align-self: flex-start;
+    width: fit-content;
+    max-width: max-content;
+    white-space: nowrap;
+  }
+
+  .request-demo-link:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+  }
+
+  .app-card .app-tag + .demo-link,
+  .app-card .app-tag + .request-demo-link {
+    margin-top: 10px;
+  }
+
+
+  /* ── AJUSTE PONTUAL V23: SEM SCROLL LATERAL + BOTÕES PADRONIZADOS ── */
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+
+  * {
+    max-width: 100%;
+  }
+
+  main,
+  header,
+  footer {
+    overflow-x: clip;
+  }
+
+  .app-grid,
+  .section,
+  .tab-content,
+  .app-card {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .app-card {
+    min-width: 0;
+  }
+
+  .app-name,
+  .app-type {
+    overflow-wrap: anywhere;
+  }
+
+  .app-card .demo-link,
+  .app-card .request-demo-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 130px !important;
+    max-width: 130px !important;
+    min-height: 32px !important;
+    margin-top: 10px !important;
+    padding: 7px 10px !important;
+    border-radius: 10px !important;
+    background: var(--accent) !important;
+    color: #fff !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    align-self: flex-start !important;
+    white-space: nowrap !important;
+  }
+
+  .app-card .demo-link:active,
+  .app-card .request-demo-link:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+  }
+
+  .app-card .app-tag {
+    align-self: flex-start !important;
+    width: fit-content !important;
+    max-width: max-content !important;
+    white-space: nowrap !important;
+  }
+
+
+  /* ── AJUSTE MOBILE V24: BOTÕES DOS CARDS SEM CORTE ── */
+  @media (max-width: 899px) {
+    .app-card .demo-link,
+    .app-card .request-demo-link {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      align-self: stretch !important;
+      justify-content: center !important;
+    }
+  }
+
+
+  /* ── MODAL DE SOLICITAÇÃO DE PLANILHA ── */
+  .sheet-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(26, 24, 22, 0.56);
+    backdrop-filter: blur(8px);
+  }
+
+  .sheet-modal.active {
+    display: flex;
+  }
+
+  .sheet-modal-card {
+    width: min(100%, 430px);
+    max-height: min(86vh, 720px);
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow-lg);
+    padding: 18px;
+  }
+
+  .sheet-modal-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .sheet-modal-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .sheet-modal-subtitle {
+    margin-top: 4px;
+    color: var(--text-soft);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .sheet-modal-close {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    background: var(--surface2);
+    color: var(--text-soft);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .sheet-form {
+    display: grid;
+    gap: 12px;
+  }
+
+  .sheet-form-group {
+    display: grid;
+    gap: 6px;
+  }
+
+  .sheet-form-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .sheet-form-field {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 12px 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+
+  .sheet-form-field:focus {
+    border-color: var(--accent);
+    background: var(--surface);
+    box-shadow: 0 0 0 3px rgba(45,107,228,0.12);
+  }
+
+  textarea.sheet-form-field {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+
+  .sheet-form-note {
+    background: var(--accent-light);
+    border: 1px solid rgba(45,107,228,0.16);
+    color: var(--accent);
+    border-radius: 14px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.55;
+    font-weight: 600;
+  }
+
+  .sheet-form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 2px;
+  }
+
+  .sheet-submit,
+  .sheet-cancel {
+    min-height: 42px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .sheet-submit {
+    flex: 1;
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .sheet-cancel {
+    width: 96px;
+    background: var(--surface2);
+    color: var(--text-soft);
+  }
+
+  body.modal-open {
+    overflow: hidden;
+  }
+
+
+  /* ── AJUSTE DE LEGIBILIDADE DO FORMULÁRIO DE PLANILHA ── */
+  .sheet-modal-card,
+  .sheet-modal-card * {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    letter-spacing: normal !important;
+  }
+
+  .sheet-modal-title {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.4px !important;
+    text-transform: none !important;
+  }
+
+  .sheet-modal-subtitle {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+  }
+
+  .sheet-form-label {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2px !important;
+    text-transform: none !important;
+    color: var(--text-soft) !important;
+  }
+
+  .sheet-form-field {
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+  }
+
+  textarea.sheet-form-field {
+    line-height: 1.55 !important;
+  }
+
+
+  /* ── CORREÇÃO DO BOTÃO FECHAR DO MODAL ── */
+  .sheet-modal-close {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: 'DM Sans', Arial, sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+  }
+
+  .sheet-modal-close span {
+    display: inline-block;
+    transform: translateY(-1px);
+  }
+
+
+  /* ── BOTÃO E PDF IMPRIMÍVEL DA PÁGINA ── */
+  .print-page-btn {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 760px) {
+    .print-page-btn {
+      width: 220px !important;
+      max-width: 220px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    html,
+    body {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+      color: #111111 !important;
+      overflow: visible !important;
+      font-family: Arial, sans-serif !important;
+      font-size: 11pt !important;
+    }
+
+    * {
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+      max-width: 100% !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    header,
+    footer,
+    .sheet-modal,
+    .contact-form,
+    .sheet-form,
+    .sheet-modal-card,
+    .print-page-btn,
+    .pdf-button,
+    .demo-link,
+    .request-demo-link,
+    .nav-item,
+    .sheet-modal-close,
+    .form-submit,
+    .sheet-submit,
+    .sheet-cancel {
+      display: none !important;
+    }
+
+    main {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-height: auto !important;
+      background: #ffffff !important;
+    }
+
+    .tab-content {
+      display: block !important;
+      opacity: 1 !important;
+      transform: none !important;
+      animation: none !important;
+      page-break-after: auto;
+      break-after: auto;
+      margin-bottom: 18px !important;
+    }
+
+    .tab-content::before {
+      display: block;
+      font-size: 18pt;
+      font-weight: 800;
+      margin: 0 0 10px;
+      color: #111111;
+      border-bottom: 2px solid #dddddd;
+      padding-bottom: 6px;
+    }
+
+    #tab-perfil::before { content: "Perfil"; }
+    #tab-skills::before { content: "Habilidades"; }
+    #tab-exp::before { content: "Carreira"; }
+    #tab-apps::before { content: "Criações"; }
+    #tab-contato::before { content: "Contato"; }
+
+    .hero {
+      background: #f4f6fb !important;
+      color: #111111 !important;
+      border: 1px solid #dddddd !important;
+      border-radius: 12px !important;
+      padding: 14px !important;
+      margin-bottom: 12px !important;
+      overflow: visible !important;
+    }
+
+    .hero::before,
+    .hero::after {
+      display: none !important;
+    }
+
+    .hero-name,
+    .hero-role,
+    .hero-tag {
+      color: #111111 !important;
+    }
+
+    .hero-avatar {
+      box-shadow: none !important;
+      width: 64px !important;
+      height: 64px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .section {
+      padding: 0 !important;
+      margin: 0 0 14px !important;
+    }
+
+    .section-title {
+      color: #333333 !important;
+      margin: 14px 0 8px !important;
+      letter-spacing: 0.5px !important;
+      font-size: 10pt !important;
+    }
+
+    .stats-row,
+    .app-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 8px !important;
+      margin-bottom: 10px !important;
+    }
+
+    .card,
+    .stat-card,
+    .pcd-banner,
+    .app-card,
+    .contact-link {
+      background: #ffffff !important;
+      border: 1px solid #dddddd !important;
+      border-radius: 10px !important;
+      padding: 10px !important;
+      margin-bottom: 8px !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .contact-link {
+      display: flex !important;
+      color: #111111 !important;
+      text-decoration: none !important;
+    }
+
+    .chips {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 5px !important;
+    }
+
+    .chip,
+    .app-tag,
+    .card-period {
+      border: 1px solid #dddddd !important;
+      background: #f4f4f4 !important;
+      color: #111111 !important;
+      padding: 3px 6px !important;
+      border-radius: 8px !important;
+      font-size: 8.5pt !important;
+      width: fit-content !important;
+      max-width: max-content !important;
+    }
+
+    .card-desc,
+    .pcd-sub,
+    .info-value,
+    .info-label,
+    .card-sub,
+    .app-type,
+    .contact-label,
+    .contact-value,
+    .course-name {
+      color: #222222 !important;
+    }
+
+    .info-row,
+    .course-item {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .page-footer,
+    .site-footer,
+    .footer-note {
+      display: block !important;
+      text-align: center !important;
+      margin-top: 18px !important;
+      color: #555555 !important;
+      font-size: 9pt !important;
+    }
+  }
+
+
+  /* ── MELHORIA DA VERSÃO IMPRESSA V41 ── */
+  @media print {
+    body::before {
+      content: "Kaio Adriel Guimarães | Portfólio Profissional";
+      display: block;
+      font-size: 20pt;
+      font-weight: 800;
+      margin: 0 0 6mm;
+      padding-bottom: 4mm;
+      border-bottom: 2px solid #222;
+      color: #111;
+    }
+
+    body::after {
+      content: "© 2026 Kaio Adriel";
+      display: block;
+      margin-top: 8mm;
+      padding-top: 3mm;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      color: #555;
+      font-size: 9pt;
+    }
+
+    .app-benefit {
+      color: #333 !important;
+      font-size: 9pt !important;
+      line-height: 1.45 !important;
+      margin-top: 3px !important;
+    }
+
+    .differentials-grid,
+    .availability-chips {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 6px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .mini-card {
+      border: 1px solid #ddd !important;
+      background: #fff !important;
+      color: #111 !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .whatsapp-profile-btn {
+      display: none !important;
+    }
+  }
+
+  /* ── MELHORIAS DE CONTEÚDO V41 ── */
+  .hero-impact {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    max-width: 360px;
+    color: rgba(255,255,255,0.86);
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .differentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .mini-card {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .mini-card i {
+    color: var(--accent);
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .availability-chips {
+    margin-bottom: 14px;
+  }
+
+  .whatsapp-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    margin-bottom: 10px;
+  }
+
+  .app-benefit {
+    color: var(--text-soft);
+    font-size: 11px;
+    line-height: 1.45;
+    margin-top: 6px;
+  }
+
+  .privacy-note {
+    opacity: 0.95;
+  }
+
+  /* ── CORREÇÃO FINAL DE CLIQUES E BOTÕES DO PERFIL V43 ── */
+  .profile-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+  }
+
+  .profile-action-buttons .pdf-button,
+  .whatsapp-profile-btn,
+  .demo-link,
+  .request-demo-link,
+  .contact-link,
+  .nav-item {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 6;
+  }
+
+  .profile-action-buttons .pdf-button {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #download-curriculo-pdf span,
+  .print-page-btn span {
+    display: inline;
+  }
+
+  @media (min-width: 760px) {
+    .profile-action-buttons {
+      align-items: flex-start;
+    }
+
+    .profile-action-buttons .pdf-button {
+      width: 220px !important;
+      max-width: 220px !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+    }
+  }
+
+  @media (max-width: 759px) {
+    .profile-action-buttons .pdf-button {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+
+
+  .hire-card {
+    margin-bottom: 14px;
+  }
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kaio Adriel Guimarães",
+  "alternateName": "Kaio Adriel",
+  "url": "https://kaioadriel.com.br/",
+  "image": "https://kaioadriel.com.br/fotos/fotoperfil.jpg",
+  "jobTitle": "Auxiliar/Assistente Administrativo",
+  "email": "mailto:contato@kaioadriel.com.br",
+  "telephone": "+55 13 99706-3969",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Praia Grande",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/kaioadriel"
+  ],
+  "knowsAbout": [
+    "Rotinas Administrativas",
+    "Excel Avançado",
+    "Inteligência Artificial",
+    "Planilhas",
+    "Dashboards",
+    "Criação de Páginas HTML",
+    "Criação de Aplicativos Simples",
+    "Automação de Tarefas"
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-name">Kaio Adriel Guimarães</div>
+  <div class="header-badge">🟢 Disponível</div>
+</header>
+
+<!-- MAIN -->
+<main>
+
+  <!-- ===== ABA: PERFIL ===== -->
+  <div class="tab-content active" id="tab-perfil">
+
+    <div class="hero">
+      <div class="hero-avatar"><img src="https://kaioadriel.com.br/fotos/fotoperfil.jpg?v=2026" alt="Foto de perfil de Kaio Adriel Guimarães" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback'); this.parentElement.textContent='KA';"></div>
+      <div class="hero-name">Kaio Adriel</div>
+      <div class="hero-role">Auxiliar / Assistente Administrativo</div>
+
+      <div class="hero-impact">Uno experiência administrativa, Excel e Inteligência Artificial para criar controles, planilhas, automações e soluções digitais sob medida.</div>
+      <div class="hero-tags">
+        <span class="hero-tag blue">📍 Praia Grande/SP</span>
+        <span class="hero-tag">Presencial</span>
+        <span class="hero-tag">Home Office</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Anos de exp.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" style="color: var(--accent2)">5</div>
+          <div class="stat-label">Empresas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" style="color: var(--green)">8</div>
+          <div class="stat-label">Cursos</div>
+        </div>
+      </div>
+
+      <div class="pcd-banner">
+        <div class="pcd-icon pcd-icon-img"><img src="https://kaioadriel.com.br/fotos/acessibilidade.png" alt="Ícone de acessibilidade" loading="lazy" decoding="async"></div>
+        <div>
+          <div class="pcd-title">Profissional PCD</div>
+          <div class="pcd-sub">Pessoa com Deficiência Física - CID: S14.3 - Apto para vagas destinadas ao cumprimento de cotas.</div>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:16px">Perfil e Objetivo</div>
+      <div class="card" style="padding:16px">
+        <p style="font-size:13px;color:var(--text-soft);line-height:1.7">
+          Busco oportunidade como Auxiliar/Assistente Administrativo, com disponibilidade para atuação presencial ou home office. Tenho experiência em rotinas administrativas, conferência de documentos, controle de contas, organização de pedidos, vendas online, elaboração de planilhas, acompanhamento de processos e suporte operacional. Minha principal proposta é unir experiência administrativa, facilidade com tecnologia, Excel e Inteligência Artificial para criar controles, planilhas, fluxos, automações simples e soluções personalizadas para o que cada setor precisa. Quando não existe uma planilha de controle, um fluxo organizado ou um sistema simples, posso estruturar uma solução prática para melhorar a rotina da equipe, reduzir retrabalho e deixar as informações mais claras.
+        </p>
+      </div>
+
+      <div class="section-title" style="margin-top:16px">Informações</div>
+      <div class="card narrow-desktop" style="padding:0 16px">
+        <div class="info-row">
+          <div class="info-icon blue"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <div class="info-label">Localização</div>
+            <div class="info-value">Praia Grande/SP</div>
+          </div>
+        </div>
+        <a class="info-row info-link" href="mailto:contato@kaioadriel.com.br">
+          <div class="info-icon orange" style="background:var(--accent2-light);color:var(--accent2)"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="info-label">E-mail</div>
+            <div class="info-value">contato@kaioadriel.com.br</div>
+          </div>
+        </a>
+        <a class="info-row info-link" href="https://wa.me/5513997063969" target="_blank">
+          <div class="info-icon green" style="background:var(--green-light);color:var(--green)"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <div class="info-label">Telefone / WhatsApp</div>
+            <div class="info-value">(13) 99706-3969</div>
+          </div>
+        </a>
+        <a class="info-row info-link" href="https://linkedin.com/in/kaioadriel" target="_blank">
+          <div class="info-icon purple" style="background:var(--purple-light);color:var(--purple)"><i class="fa-brands fa-linkedin"></i></div>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-value">linkedin.com/in/kaioadriel</div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="section-title" style="margin-top:16px">Diferenciais</div>
+      <div class="differentials-grid">
+        <div class="mini-card"><i class="fa-solid fa-laptop-code"></i><span>Perfil tecnológico com foco em soluções práticas</span></div>
+        <div class="mini-card"><i class="fa-solid fa-briefcase"></i><span>Experiência administrativa real</span></div>
+        <div class="mini-card"><i class="fa-solid fa-table-cells"></i><span>Excel, planilhas e dashboards</span></div>
+        <div class="mini-card"><i class="fa-solid fa-robot"></i><span>IA aplicada à produtividade</span></div>
+      </div>
+
+      
+
+
+      <div class="section-title" style="margin-top:16px">O que posso fazer se me contratar</div>
+      <div class="card hire-card narrow-desktop">
+        <div class="card-desc" style="border:none;padding:0;margin:0;font-size:13px;line-height:1.8">
+          ✅ Executar tarefas administrativas com foco em organização, controle, cumprimento de prazos e qualidade das informações.<br>
+          ✅ Estruturar checklists, fluxos de acompanhamento e controle para padronizar rotinas administrativas.<br>
+          ✅ Identificar pontos de retrabalho e propor melhorias simples para tornar os processos mais claros, rápidos e organizados.<br>
+          ✅ Trabalhar em equipe com boa comunicação, respeito e colaboração, apoiando colegas e gestores nas rotinas do setor.<br>
+          ✅ Criar planilhas personalizadas para controle de processos.<br>
+          ✅ Desenvolver dashboards e indicadores para acompanhamento de resultados e desempenho.<br>
+          ✅ Criar páginas HTML, mini sistemas, aplicativos simples e soluções digitais personalizadas para os processos do setor.<br>
+          ✅ Utilizar Inteligência Artificial e ferramentas digitais para melhorar produtividade.<br>
+          ✅ Criar textos, relatórios, anúncios, imagens e vídeos com IA utilizando prompts avançados.<br>
+          ✅ Unir experiência administrativa, tecnologia e visão prática para entregar soluções úteis, simples e aplicáveis no dia a dia da empresa.
+        </div>
+      </div><div class="section-title" style="margin-top:16px">Disponível para</div>
+      <div class="chips availability-chips">
+        <span class="chip blue">Auxiliar Administrativo</span>
+        <span class="chip blue">Assistente Administrativo</span>
+        <span class="chip purple">Suporte Operacional</span>
+        <span class="chip green">Vagas PCD</span>
+      </div>
+
+      <a class="whatsapp-profile-btn" href="https://wa.me/5513997063969" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        Entrar em contato pelo WhatsApp
+      </a>
+
+
+      <div class="profile-action-buttons">
+        <a class="pdf-button pdf-button-small-left" id="download-curriculo-pdf" href="https://kaioadriel.com.br/curriculo/kaioadrielguimaraes.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Download Currículo</span>
+        </a>
+        <button class="pdf-button print-page-btn" type="button" id="print-full-page">
+          <i class="fa-solid fa-print"></i>
+          <span>Imprimir esta Página</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="page-signature">© 2026 Kaio Adriel</div>
+
+  </div>
+
+  <!-- ===== ABA: HABILIDADES ===== -->
+  <div class="tab-content" id="tab-skills">
+
+    
+    <div class="section">
+      
+      <div class="section-title">Competências Técnicas</div>
+
+      <div class="card narrow-desktop" style="padding:18px">
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Excel Avançado</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Pacote Office</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill blue" data-w="88"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Inteligência Artificial</span>
+            <span class="skill-pct">95%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill purple" data-w="95"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Windows</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill orange" data-w="90"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Android</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill green" data-w="88"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Criação de Páginas HTML</span>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-row">
+            <span class="skill-name">Criação de Apps Simples</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill purple" data-w="80"></div></div>
+        </div>
+
+        <div class="skill-item" style="margin-bottom:0">
+          <div class="skill-row">
+            <span class="skill-name">Automação de Tarefas</span>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill orange" data-w="78"></div></div>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px">Administrativo</div>
+      <div class="chips">
+        <span class="chip">Rotinas Administrativas</span>
+        <span class="chip">Conferência Documental</span>
+        <span class="chip">Controle de Contratos</span>
+        <span class="chip">Controle de Pendências</span>
+        <span class="chip">Processos de Financiamento</span>
+        <span class="chip">Contas a Pagar</span>
+        <span class="chip">Compras e Fornecedores</span>
+        <span class="chip">Controle de Notas Fiscais</span>
+        <span class="chip">Elaboração de Relatórios</span>
+        <span class="chip">Gestão de Prazos</span>
+        <span class="chip">Acompanhamento de Processos</span>
+        <span class="chip">Suporte Operacional</span>
+        <span class="chip">Controle de Gravames</span>
+        <span class="chip">Organização de Arquivos e Documentos</span>
+        <span class="chip">Lançamentos e Conferências Administrativas</span>
+        <span class="chip">Importação e Exportação</span>
+        <span class="chip">Rotinas de Terminais Portuários</span>
+      </div>
+
+      <div class="section-title" style="margin-top:20px">Ferramentas de IA</div>
+      <div class="chips">
+        <span class="chip blue"><i class="fa-solid fa-robot"></i> ChatGPT</span>
+        <span class="chip blue"><i class="fa-solid fa-robot"></i> Gemini</span>
+        <span class="chip blue"><i class="fa-solid fa-robot"></i> Claude</span>
+        <span class="chip purple"><i class="fa-solid fa-wand-magic-sparkles"></i> Prompts Avançados</span>
+        <span class="chip orange"><i class="fa-solid fa-pen-nib"></i> Criação de Textos com IA</span>
+        <span class="chip orange"><i class="fa-solid fa-file-lines"></i> Criação de Relatórios com IA</span>
+        <span class="chip orange"><i class="fa-solid fa-image"></i> Criação de Imagens com IA</span>
+        <span class="chip orange"><i class="fa-solid fa-video"></i> Criação de Vídeos com IA</span>
+        <span class="chip yellow"><i class="fa-solid fa-code"></i> Criação de Apps com IA</span>
+      </div>
+
+      <div class="section-title" style="margin-top:20px">Competências Comportamentais</div>
+      <div class="chips">
+        <span class="chip green"><i class="fa-solid fa-check"></i> Responsabilidade</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Organização</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Proatividade</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Boa Comunicação</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Trabalho em Equipe</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Respeito e Colaboração</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Atenção aos Detalhes</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Foco em Resultados</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Aprendizado Rápido</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Adaptabilidade</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Comprometimento</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Pensamento Analítico</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Resolução de Problemas</span>
+        <span class="chip green"><i class="fa-solid fa-check"></i> Melhoria Contínua</span>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- ===== ABA: EXPERIÊNCIA ===== -->
+  <div class="tab-content" id="tab-exp">
+
+    <div class="section">
+      <div class="section-title">Trajetória profissional</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon orange"><i class="fa-solid fa-building-columns"></i></div>
+          <div>
+            <div class="card-title">Auxiliar Administrativo</div>
+            <div class="card-sub">BV Financeira</div>
+            <div class="card-period">Fev/2016 – Jan/2020</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          Auxílio em processos de financiamentos e empréstimos, gestão e conferência de contratos, validação documental, lançamentos no contas a pagar, compras, fornecedores, malotes, suporte a colaboradores, criação de planilhas personalizadas, apresentações de resultados e auxílio com tecnologia para organização, controle e melhoria das rotinas administrativas.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon green"><i class="fa-solid fa-headset"></i></div>
+          <div>
+            <div class="card-title">Assistente de Atendimento</div>
+            <div class="card-sub">Ecoporto Santos</div>
+            <div class="card-period">Fev/2014 – Dez/2015</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          Atendimento por telefone e e-mail, suporte a demandas comerciais, tratativas com setores internos e solução de problemas.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon purple"><i class="fa-solid fa-ship"></i></div>
+          <div>
+            <div class="card-title">Auxiliar de Importação Pleno</div>
+            <div class="card-sub">Brasiliense Comissária de Despachos</div>
+            <div class="card-period">Out/2010 – Jan/2014</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          Chegada de navios, documentação de carga, pagamentos, liberação de BL, armazenagem e atendimento ao importador.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon blue"><i class="fa-solid fa-anchor"></i></div>
+          <div>
+            <div class="card-title">Auxiliar de Exportação</div>
+            <div class="card-sub">Brasiliense Comissária de Despachos</div>
+            <div class="card-period">Jul/2009 – Out/2010</div>
+          </div>
+        </div>
+        <div class="card-desc">
+          Draft de BL, DDE, desembaraço, documentos para o Ministério da Agricultura e pagamentos junto a agências e armadores.
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px">Formação</div>
+
+      <div class="card narrow-desktop" style="padding:14px 16px">
+        <div class="info-row" style="padding: 10px 0;">
+          <div class="info-icon" style="background:var(--surface2);color:var(--text-soft)"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <div class="info-label">Ensino Médio Completo</div>
+            <div class="info-value">Prof. Dr. Oswaldo Santos Soares · 2008</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title" style="margin-top:20px">Cursos & Certificações</div>
+      <div class="card narrow-desktop" style="padding: 8px 16px">
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--accent)"></div>
+          <div class="course-name">Inteligência Artificial: Do Zero ao Avançado</div>
+        </div>
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--accent)"></div>
+          <div class="course-name">Excel Avançado</div>
+        </div>
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--accent2)"></div>
+          <div class="course-name">Macros e VBA para Excel</div>
+        </div>
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--accent2)"></div>
+          <div class="course-name">Técnicas para Dashboards Profissionais</div>
+        </div>
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--green)"></div>
+          <div class="course-name">Customer Success na Prática</div>
+        </div>
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--green)"></div>
+          <div class="course-name">Gestão da Inovação e Processos de Criatividade</div>
+        </div>
+        <div class="course-item">
+          <div class="course-dot" style="background:var(--purple)"></div>
+          <div class="course-name">Gestão de Tempo, Organização e GTD</div>
+        </div>
+        <div class="course-item" style="border-bottom:none">
+          <div class="course-dot" style="background:var(--purple)"></div>
+          <div class="course-name">PDCA e Ferramentas de Qualidade</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-signature">© 2026 Kaio Adriel</div>
+
+  </div>
+
+  <!-- ===== ABA: CRIAÇÕES ===== -->
+  <div class="tab-content" id="tab-apps">
+
+    <div class="section">
+      <div class="section-title">Apps & Soluções digitais criadas</div>
+
+      <div class="app-grid">
+
+        <div class="app-card"><div class="app-icon" style="background:var(--green-light)">⚖️</div><div class="app-name">Projeto Leve</div><div class="app-type">App para acompanhamento de perda de peso</div>
+          <div class="app-benefit">Acompanhe evolução, peso, metas e progresso de forma simples.</div><div class="app-tag" style="background:var(--green-light);color:var(--green)">Saúde</div>
+          <a class="demo-link" style="margin-top:10px" href="https://kaioadriel.com.br/apps/projetoleve.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> VER DEMO</a>
+        </div>
+
+        <div class="app-card"><div class="app-icon" style="background:var(--accent-light)">🦁</div><div class="app-name">Leão Domado IR</div><div class="app-type">App para controle de Imposto de Renda</div>
+          <div class="app-benefit">Organize informações e registros para controle de Imposto de Renda.</div><div class="app-tag" style="background:var(--accent-light);color:var(--accent)">App</div>
+          <a class="demo-link" href="https://kaioadriel.com.br/apps/leaodomado.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> VER DEMO</a>
+        </div>
+
+        <div class="app-card"><div class="app-icon" style="background:var(--accent2-light)">💊</div><div class="app-name">Med Control</div><div class="app-type">App para acompanhar doses de remédios e suplementos</div>
+          <div class="app-benefit">Controle doses, horários, remédios e suplementos com mais segurança.</div><div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">Saúde</div>
+          <a class="demo-link" style="margin-top:10px" href="https://kaioadriel.com.br/apps/med.html" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i> VER DEMO</a>
+        </div>
+
+        <div class="app-card"><div class="app-icon" style="background:var(--accent-light)">📄</div><div class="app-name">Planilha de Pendência de Contratos</div><div class="app-type">Excel / Controle Administrativo</div>
+          <div class="app-benefit">Acompanhe contratos pendentes, status, responsáveis e prazos.</div><div class="app-tag" style="background:var(--accent-light);color:var(--accent)">Planilha</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Pendências de Contratos"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a></div>
+
+        <div class="app-card"><div class="app-icon" style="background:var(--accent2-light)">🚗</div><div class="app-name">Planilha de Controle de Gravames</div><div class="app-type">Excel / Financiamentos</div>
+          <div class="app-benefit">Controle gravames, financiamentos, liberações e pendências.</div><div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">Controle</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilhas de Controle de Gravames"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card"><div class="app-icon" style="background:var(--green-light)">📦</div><div class="app-name">Planilha de Estoque</div><div class="app-type">Excel / Produtos</div>
+          <div class="app-benefit">Controle entradas, saídas, saldo atual e reposição de produtos.</div><div class="app-tag" style="background:var(--green-light);color:var(--green)">Estoque</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Estoque"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card"><div class="app-icon" style="background:var(--purple-light)">🧾</div><div class="app-name">Planilha de Notas Fiscais e Pagamentos</div><div class="app-type">Excel / Financeiro</div>
+          <div class="app-benefit">Organize notas, vencimentos, pagamentos e situação financeira.</div><div class="app-tag" style="background:var(--purple-light);color:var(--purple)">Financeiro</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Notas Fiscais e Pagamentos"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--purple-light)">📅</div>
+          <div class="app-name">Planilha de Escala de Trabalho</div>
+          <div class="app-type">Excel / Gestão de Equipe</div>
+          <div class="app-benefit">Monte escalas, turnos, folgas e cobertura da equipe.</div>
+          <div class="app-tag" style="background:var(--purple-light);color:var(--purple)">ESCALA</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Escala de Trabalho"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--accent-light)">🎯</div>
+          <div class="app-name">Planilha de Metas Mensal</div>
+          <div class="app-type">Excel / Indicadores</div>
+          <div class="app-benefit">Acompanhe metas, resultados, progresso e desempenho mensal.</div>
+          <div class="app-tag" style="background:var(--accent-light);color:var(--accent)">METAS</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Metas Mensal"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--green-light)">🎧</div>
+          <div class="app-name">Planilha de Atendimento ao Cliente</div>
+          <div class="app-type">Excel / Atendimento</div>
+          <div class="app-benefit">Registre atendimentos, status, histórico e retorno ao cliente.</div>
+          <div class="app-tag" style="background:var(--green-light);color:var(--green)">ATENDIMENTO</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Atendimento ao Cliente"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--accent2-light)">🛒</div>
+          <div class="app-name">Planilha de Vendas Marketplace</div>
+          <div class="app-type">Excel / Vendas Online</div>
+          <div class="app-benefit">Controle pedidos, plataformas, pagamentos e entregas.</div>
+          <div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">MARKETPLACE</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Vendas Marketplace"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--purple-light)">🤝</div>
+          <div class="app-name">Planilha de Compras e Fornecedores</div>
+          <div class="app-type">Excel / Compras</div>
+          <div class="app-benefit">Organize compras, fornecedores, prazos e valores.</div>
+          <div class="app-tag" style="background:var(--purple-light);color:var(--purple)">FORNECEDORES</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Compras e Fornecedores"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--green-light)">💰</div>
+          <div class="app-name">Planilha de Precificação e Lucro</div>
+          <div class="app-type">Excel / Financeiro</div>
+          <div class="app-benefit">Calcule custos, margem, preço final e lucro estimado.</div>
+          <div class="app-tag" style="background:var(--green-light);color:var(--green)">LUCRO</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Precificação e Lucro"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--accent-light)">🚚</div>
+          <div class="app-name">Planilha Controle de Envios e Transportadoras</div>
+          <div class="app-type">Excel / Logística</div>
+          <div class="app-benefit">Acompanhe envios, transportadoras, rastreios e entregas.</div>
+          <div class="app-tag" style="background:var(--accent-light);color:var(--accent)">LOGÍSTICA</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha Controle de Envios e Transportadoras"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:var(--accent2-light)">📈</div>
+          <div class="app-name">Planilha de Investimentos</div>
+          <div class="app-type">Excel / Investimentos</div>
+          <div class="app-benefit">Controle aplicações, aportes, evolução e rendimento.</div>
+          <div class="app-tag" style="background:var(--accent2-light);color:var(--accent2)">INVESTIMENTOS</div>
+          <a class="request-demo-link" href="#solicitar-planilha" data-planilha="Planilha de Investimentos"><i class="fa-solid fa-up-right-from-square"></i> SOLICITAR</a>
+        </div>
+
+      
+
+      
+      </div>
+    </div>
+
+    <div class="page-signature">© 2026 Kaio Adriel</div>
+
+  </div>
+
+  <!-- ===== ABA: CONTATO ===== -->
+  <div class="tab-content" id="tab-contato">
+
+    <div class="section">
+      <div class="section-title">Fale comigo</div>
+
+      <a class="contact-link narrow-desktop" href="mailto:contato@kaioadriel.com.br">
+        <div class="contact-icon" style="background:var(--accent2-light);color:var(--accent2)"><i class="fa-solid fa-envelope"></i></div>
+        <div>
+          <div class="contact-label">E-mail</div>
+          <div class="contact-value">contato@kaioadriel.com.br</div>
+        </div>
+        <div class="contact-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+      <a class="contact-link narrow-desktop" href="https://wa.me/5513997063969">
+        <div class="contact-icon" style="background:var(--green-light);color:var(--green)"><i class="fa-brands fa-whatsapp"></i></div>
+        <div>
+          <div class="contact-label">WhatsApp</div>
+          <div class="contact-value">(13) 99706-3969</div>
+        </div>
+        <div class="contact-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+      <a class="contact-link narrow-desktop" href="https://linkedin.com/in/kaioadriel" target="_blank">
+        <div class="contact-icon" style="background:var(--accent-light);color:var(--accent)"><i class="fa-brands fa-linkedin"></i></div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">linkedin.com/in/kaioadriel</div>
+        </div>
+        <div class="contact-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+      </a>
+
+
+      <div class="section-title" style="margin-top:20px">Enviar mensagem</div>
+      <form class="contact-form" action="https://formspree.io/f/mdajzqdw" method="POST">
+        <div class="form-group">
+          <label class="form-label" for="nome">Nome</label>
+          <input class="form-field" id="nome" name="nome" type="text" placeholder="Seu nome" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">E-mail</label>
+          <input class="form-field" id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="telefone">Telefone</label>
+          <input class="form-field" id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="assunto">Assunto</label>
+          <input class="form-field" id="assunto" name="assunto" type="text" placeholder="Sobre o que deseja falar?" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="mensagem">Mensagem</label>
+          <textarea class="form-field" id="mensagem" name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="Nova mensagem pelo portfólio de Kaio Adriel Guimarães">
+        <button class="form-submit form-submit-small-center" type="submit">
+          <i class="fa-solid fa-paper-plane"></i>
+          Enviar mensagem
+        </button>
+        <div class="form-note">A mensagem será enviada diretamente pelo formulário do site, sem abrir o aplicativo de e-mail do visitante.</div>
+        <div class="form-note privacy-note">As informações enviadas serão usadas apenas para retorno de contato.</div>
+      </form>
+
+      <div class="section-title" style="margin-top:20px">Disponibilidade</div>
+      <div class="card" style="padding:16px">
+        <div class="chips">
+          <span class="chip green"><i class="fa-solid fa-circle" style="font-size:8px"></i> Disponível agora</span>
+          <span class="chip blue">Presencial</span>
+          <span class="chip blue">Home Office</span>
+          <span class="chip orange">PCD — Lei de Cotas</span>
+        </div>
+        <div style="margin-top:14px;font-size:13px;color:var(--text-soft);line-height:1.6">
+          Aberto a propostas de emprego. Respondo rápido por WhatsApp ou e-mail.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-signature">© 2026 Kaio Adriel</div>
+
+  </div>
+
+</main>
+
+
+<div class="sheet-modal" id="solicitar-planilha-modal" aria-hidden="true">
+  <div class="sheet-modal-card" role="dialog" aria-modal="true" aria-labelledby="sheet-modal-title">
+    <div class="sheet-modal-head">
+      <div>
+        <div class="sheet-modal-title" id="sheet-modal-title">Solicitar Planilha</div>
+        <div class="sheet-modal-subtitle">Preencha os dados abaixo para solicitar sua planilha demo.</div>
+      </div>
+      <button class="sheet-modal-close" type="button" data-close-sheet-modal aria-label="Fechar formulário"><span aria-hidden="true">×</span></button>
+    </div>
+
+    <form class="sheet-form" action="https://formspree.io/f/xredlzkn" method="POST">
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-nome">Nome:</label>
+        <input class="sheet-form-field" id="sheet-nome" name="nome" type="text" required>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-telefone">Telefone:</label>
+        <input class="sheet-form-field" id="sheet-telefone" name="telefone" type="tel" required>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-email">E-mail:</label>
+        <input class="sheet-form-field" id="sheet-email" name="email" type="email" required>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-planilha">Planilha:</label>
+        <select class="sheet-form-field" id="sheet-planilha" name="planilha" required>
+          <option value="">Selecione uma planilha</option>
+            <option value="Planilha de Pendências de Contratos">Planilha de Pendências de Contratos</option>
+            <option value="Planilhas de Controle de Gravames">Planilhas de Controle de Gravames</option>
+            <option value="Planilha de Estoque">Planilha de Estoque</option>
+            <option value="Planilha de Notas Fiscais e Pagamentos">Planilha de Notas Fiscais e Pagamentos</option>
+            <option value="Planilha de Escala de Trabalho">Planilha de Escala de Trabalho</option>
+            <option value="Planilha de Metas Mensal">Planilha de Metas Mensal</option>
+            <option value="Planilha de Atendimento ao Cliente">Planilha de Atendimento ao Cliente</option>
+            <option value="Planilha de Vendas Marketplace">Planilha de Vendas Marketplace</option>
+            <option value="Planilha de Compras e Fornecedores">Planilha de Compras e Fornecedores</option>
+            <option value="Planilha de Precificação e Lucro">Planilha de Precificação e Lucro</option>
+            <option value="Planilha Controle de Envios e Transportadoras">Planilha Controle de Envios e Transportadoras</option>
+            <option value="Planilha de Investimentos">Planilha de Investimentos</option>
+        </select>
+      </div>
+
+      <div class="sheet-form-group">
+        <label class="sheet-form-label" for="sheet-mensagem">Mensagem:</label>
+        <textarea class="sheet-form-field" id="sheet-mensagem" name="mensagem" required></textarea>
+      </div>
+
+      <div class="sheet-form-note">
+        Solicite apenas 1 planilha Demo gratuita. Para outras, solicite um orçamento para uma versão personalizada exclusivamente para você.
+      </div>
+
+      <div class="sheet-form-note privacy-note">As informações enviadas serão usadas apenas para retorno de contato ou envio da demonstração solicitada.</div>
+
+      <input type="hidden" name="_subject" value="Solicitação de planilha demo pelo portfólio">
+      <div class="sheet-form-actions">
+        <button class="sheet-submit" type="submit">Enviar solicitação</button>
+        <button class="sheet-cancel" type="button" data-close-sheet-modal>Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- FOOTER NAV -->
+<footer>
+  <button class="nav-item active" onclick="showTab('perfil', this)">
+    <i class="fa-solid fa-house"></i>
+    <span class="nav-label">Perfil</span>
+    <div class="nav-dot"></div>
+  </button>
+  <button class="nav-item" onclick="showTab('skills', this)">
+    <i class="fa-solid fa-bolt"></i>
+    <span class="nav-label">Habilidades</span>
+    <div class="nav-dot"></div>
+  </button>
+  <button class="nav-item" onclick="showTab('exp', this)">
+    <i class="fa-solid fa-briefcase"></i>
+    <span class="nav-label">Carreira</span>
+    <div class="nav-dot"></div>
+  </button>
+  <button class="nav-item" onclick="showTab('apps', this)">
+    <i class="fa-solid fa-layer-group"></i>
+    <span class="nav-label">Criações</span>
+    <div class="nav-dot"></div>
+  </button>
+  <button class="nav-item" onclick="showTab('contato', this)">
+    <i class="fa-solid fa-paper-plane"></i>
+    <span class="nav-label">Contato</span>
+    <div class="nav-dot"></div>
+  </button>
+</footer>
+
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    document.querySelectorAll('.nav-item').forEach(nav => {
+      nav.classList.remove('active');
+    });
+
+    const targetTab = document.getElementById('tab-' + id);
+    if (targetTab) {
+      targetTab.classList.add('active');
+    }
+
+    if (btn) {
+      btn.classList.add('active');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (id === 'skills') {
+      setTimeout(() => {
+        document.querySelectorAll('.skill-fill').forEach(el => {
+          el.style.width = (el.dataset.w || 0) + '%';
+        });
+      }, 100);
+    }
+
+    if (window.portfolioAnalytics) {
+      window.portfolioAnalytics.track('aba_' + id);
+    }
+  }
+
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.skill-fill').forEach(el => {
+      el.style.width = '0%';
+    });
+  });
+
+  // Analytics simples local e sem cookies externos
+  window.portfolioAnalytics = {
+    track(eventName) {
+      try {
+        const key = 'portfolio_analytics_' + eventName;
+        const current = Number(localStorage.getItem(key) || '0') + 1;
+        localStorage.setItem(key, String(current));
+        console.log('[Portfolio Analytics]', eventName, current);
+      } catch (error) {
+        console.log('[Portfolio Analytics]', eventName);
+      }
+    }
+  };
+
+  // Modal de solicitação de planilha
+  const sheetModal = document.getElementById('solicitar-planilha-modal');
+  const sheetSelect = document.getElementById('sheet-planilha');
+  const sheetMessage = document.getElementById('sheet-mensagem');
+
+  function openSheetModal(planilha = '') {
+    if (!sheetModal) return;
+
+    sheetModal.classList.add('active');
+    sheetModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    if (planilha && sheetSelect) {
+      sheetSelect.value = planilha;
+    }
+
+    if (planilha && sheetMessage) {
+      sheetMessage.value = 'Olá, tenho interesse em solicitar a demo gratuita da ' + planilha + '.';
+    }
+
+    setTimeout(() => {
+      const firstInput = document.getElementById('sheet-nome');
+      if (firstInput) firstInput.focus();
+    }, 80);
+  }
+
+  function closeSheetModal() {
+    if (!sheetModal) return;
+    sheetModal.classList.remove('active');
+    sheetModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  document.querySelectorAll('.request-demo-link').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      openSheetModal(link.dataset.planilha || '');
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.track('clique_solicitar_planilha');
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-close-sheet-modal]').forEach(button => {
+    button.addEventListener('click', closeSheetModal);
+  });
+
+  if (sheetModal) {
+    sheetModal.addEventListener('click', event => {
+      if (event.target === sheetModal) {
+        closeSheetModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeSheetModal();
+    }
+  });
+
+  // Download Currículo: abre nova página, espera 1,2s e baixa
+  const curriculoPdfButton = document.getElementById('download-curriculo-pdf');
+  if (curriculoPdfButton) {
+    curriculoPdfButton.addEventListener('click', event => {
+      event.preventDefault();
+
+      const pdfUrl = curriculoPdfButton.href;
+
+      window.open(pdfUrl, '_blank');
+
+      window.setTimeout(() => {
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pdfUrl;
+        downloadLink.download = 'kaioadrielguimaraes.pdf';
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        downloadLink.remove();
+      }, 1200);
+
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.track('download_curriculo');
+      }
+    });
+  }
+
+  // Imprimir esta página
+  const printFullPageButton = document.getElementById('print-full-page');
+  if (printFullPageButton) {
+    printFullPageButton.addEventListener('click', () => {
+      document.body.classList.add('printing-full-page');
+
+      window.setTimeout(() => {
+        window.print();
+      }, 100);
+
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.track('imprimir_pagina');
+      }
+    });
+  }
+
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('printing-full-page');
+  });
+
+  // Links VER DEMO apenas em nova aba
+  document.querySelectorAll('.demo-link').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      window.open(link.href, '_blank');
+
+      if (window.portfolioAnalytics) {
+        window.portfolioAnalytics.track('clique_ver_demo');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
